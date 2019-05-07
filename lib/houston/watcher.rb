@@ -22,11 +22,10 @@ module Houston
 
 
   # Register events that will be raised by this module
-  #
-  #    register_events {{
-  #      "watcher:create" => params("watcher").desc("Watcher was created"),
-  #      "watcher:update" => params("watcher").desc("Watcher was updated")
-  #    }}
+  register_events {{
+    "watcher:success" => params("checkin").desc("Site successfully checked"),
+    "watcher:fail" => params("checkin").desc("Site check failed")
+  }}
 
 
   # Add a link to Houston's global navigation

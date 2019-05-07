@@ -19,7 +19,8 @@ Gem::Specification.new do |spec|
   spec.test_files = Dir["test/**/*"]
 
   spec.add_dependency "houston-core", ">= 0.9.2"
+  spec.add_dependency "multi_json", "~> 1.13.1"
 
-  spec.add_development_dependency "bundler", "~> 1.17.2"
+  spec.add_development_dependency "bundler", "~> 2.0.1"
   spec.add_development_dependency "rake", "~> 10.0"
 end
