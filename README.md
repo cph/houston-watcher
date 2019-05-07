@@ -1,6 +1,10 @@
 # Houston::Watcher
 
-TODO: Summary of Houston Watcher.
+Houston Watcher sets up Houston to monitor an endpoint for availability and potentially other additional information.
+
+At the interval specified in the configuration, it will send a GET request to an endpoint and record both the status of that request and a JSON response, if given. These will be stored in the database as Checkins, which belong to a project.
+
+For reacting to checkins, subscribe to the `watcher:success` and `watcher:fail` triggers.
 
 
 ## Installation
@@ -13,7 +17,7 @@ And in `config/main.rb`, add:
 
 ```ruby
 use :watcher do
-  # TODO: specify configuration options for Houston::Watcher here
+  watch :project_slug, url: https://..., every: "30 minutes"
 end
 ```
 
